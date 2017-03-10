@@ -60,7 +60,7 @@ class Simple_drawing_window_Pang(QWidget):
         
         
         
-        class Simple_drawing_window_2(QWidget):
+class Simple_drawing_window_2(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
         self.setWindowTitle("Simple Drawing")
@@ -74,3 +74,18 @@ class Simple_drawing_window_Pang(QWidget):
         p.drawPolygon([QPoint(300, 300), QPoint(400, 400), QPoint(500, 400) , QPoint(400, 300)])
 
         p.end()
+
+def main():
+    app = QApplication(sys.argv)
+    w1 = Simple_drawing_window_fant()
+    w2 = Simple_drawing_window_Pang()
+    w3 = Simple_drawing_window_2()
+    w1.show()
+    w2.show()
+    w3.show()
+
+    return app.exec_()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
