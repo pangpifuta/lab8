@@ -1,0 +1,25 @@
+class draw(QMainWindow):
+
+    def __init__(self):
+        QMainWindow.__init__(self)
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            pos = QCursor
+            p = QPainter()
+            p.begin(self)
+            p.setPen(QColor(134, 10, 0))
+            p.drawPoint(pos.pos().x(), pos.pos().y())
+            p.end()
+
+
+
+          
+def main(argv):
+    app = QApplication(argv, True)
+    wnd = draw()
+    wnd.show()
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main(sys.argv)
