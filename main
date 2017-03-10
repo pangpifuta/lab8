@@ -1,0 +1,14 @@
+def main():
+    app = QApplication(sys.argv)
+    w1 = Simple_drawing_window_fant()
+    w2 = Simple_drawing_window_pang()
+    w3 = Simple_drawing_window2()
+    w1.show()
+    w2.show()
+    w3.show()
+
+    return app.exec_()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
