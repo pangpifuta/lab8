@@ -42,6 +42,9 @@ class MyWidget(QMainWindow):
         self.setMinimumSize(400, 400)
         self.initMenu()
         self.w = W()
+        
+        self.button = QtGui.QPushButton("clear")
+        
         self.setCentralWidget(self.w)
         self.t = QTimer(self.w)
         self.t.timeout.connect(self.w.myTimeOut)
