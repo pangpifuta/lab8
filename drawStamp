@@ -1,0 +1,14 @@
+class Simple_drawing_window_2(QWidget):
+    def __init__(self):
+        QWidget.__init__(self, None)
+        self.setWindowTitle("Simple Drawing")
+
+    def paintEvent(self, e):
+        p = QPainter()
+        p.begin(self)
+
+        p.setPen(QColor(0, 0, 0))
+        p.setBrush(QColor(100, 150, 0))
+        p.drawPolygon([QPoint(300, 300), QPoint(400, 400), QPoint(500, 400) , QPoint(400, 300)])
+
+        p.end()
